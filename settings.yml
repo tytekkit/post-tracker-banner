@@ -1,0 +1,11 @@
+text:
+  default: There were [reply_count] replies & [reads] read posts recently.
+  description: To display stats, use [] to denote special variables that will be replaced with counts, such as category names, [reads], [readers_count] or [reply_count].
+
+text_adjustment:
+  default: left
+  type: enum
+  choices:
+    - left
+    - center
+    - right

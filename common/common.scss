@@ -1,0 +1,22 @@
+
+div.posts-banner {
+    display: grid;
+    place-items: center;
+    max-width: var(--d-max-width);
+    margin: auto;
+    padding: 1.6em;
+    box-sizing: border-box;
+
+    h1.posts-text {
+
+        &.left {
+            text-align: left;
+        }
+        &.center {
+            text-align: center;
+        }
+        &.right {
+            text-align: right;
+        }
+    }
+}
