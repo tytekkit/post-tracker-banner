@@ -1,5 +1,13 @@
+icon:
+  default: sliders-h
+  description: Any FontAwesome 5 Free icon
+
+icon_size:
+  default: 2.4
+  type: float
+
 text:
-  default: There were [reply_count] replies & [reads] read posts recently.
+  default: There were [reply_count] replies & [reads] read posts recently. [Staff] new posts in Staff.
   description: To display stats, use [] to denote special variables that will be replaced with counts, such as category names, [reads], [readers_count] or [reply_count].
 
 text_adjustment:
@@ -9,3 +17,7 @@ text_adjustment:
     - left
     - center
     - right
+
+font_size:
+  default: 1.0
+  type: float

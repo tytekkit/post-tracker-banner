@@ -1,22 +1,35 @@
+div.post-tracker {
 
-div.posts-banner {
-    display: grid;
-    place-items: center;
-    max-width: var(--d-max-width);
-    margin: auto;
-    padding: 1.6em;
-    box-sizing: border-box;
+    background-color: var(--secondary-very-high);
 
-    h1.posts-text {
+    div.posts-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        max-width: var(--d-max-width);
+        margin: auto;
+        padding: 3em 1.6em;
+        box-sizing: border-box;
 
-        &.left {
-            text-align: left;
+        svg {
+            font-size: var(--iconSize);
         }
-        &.center {
-            text-align: center;
-        }
-        &.right {
-            text-align: right;
+    
+        h1.posts-text {
+            
+            font-size: var(--fontSize);
+            margin: 0;
+    
+            &.left {
+                text-align: left;
+            }
+            &.center {
+                text-align: center;
+            }
+            &.right {
+                text-align: right;
+            }
         }
     }
 }

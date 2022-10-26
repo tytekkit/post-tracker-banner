@@ -22,7 +22,8 @@ export default class TopContributors extends Component {
 
             ajax(`/posts.json?period=weekly`).then((data) => {
 
-                let latestPosts = data.latest_posts,
+                let textElement = document.createElement("text"),
+                    latestPosts = data.latest_posts,
                     categoryIds = {},
                     reads = 0,
                     readersCount = 0,
@@ -36,20 +37,25 @@ export default class TopContributors extends Component {
                 }
 
                 for (const [key, value] of Object.entries(categoryIds)) {
-                    settingsText = settingsText.replace(`[${newCategoryObj[key]}]`, value);
+                    settingsText = settingsText.replace(`[${newCategoryObj[key]}]`,
+                    `<a href="c/${key}/">${value}</a>`);
                 }
 
                 settingsText = settingsText.replace("[reads]", reads);
                 settingsText = settingsText.replace("[readers_count] ", readersCount );
                 settingsText = settingsText.replace("[reply_count]", replyCount);
-
-                this.postsText = settingsText;
+                
+                textElement.innerHTML = settingsText;
+                this.postsText = textElement;
 
             });
 
         });
 
         this.textAdjustment = settings.text_adjustment;
+        this.fontSize = settings.font_size + "em";
+        this.icon = settings.icon;
+        this.iconSize = settings.icon_size + "em";
 
     }
   
