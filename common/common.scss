@@ -1,3 +1,10 @@
+
+body:not(.topics-list):not(.categories-list) {
+    div.post-tracker {
+        display: none;
+    }
+}
+
 div.post-tracker {
 
     background-color: var(--secondary-very-high);
